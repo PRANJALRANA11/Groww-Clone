@@ -1,17 +1,21 @@
-import React from "react";
-import Navbar from '../Components/Navbar'
-import Main from "../Components/Main";
-import Section from "../Components/Section";
-import Footer from "../Components/Footer";
-import Signup_Dialog from "../Components/Signup_Dialog";
+import React, { useState } from "react";
+import Navbar from '../Components/Home_comp/Navbar'
+import Main from "../Components/Home_comp/Main";
+import Section from "../Components/Home_comp/Section";
+import Footer from "../Components/Home_comp/Footer";
+import Signup_Dialog from "../Components/Home_comp/Signup_Dialog";
 function Home() {
+   const[toggleDialog,settoggledialog]=useState(false);
+   const handleDialog=()=>{
+    settoggledialog(prevState => !prevState)
+   }
     return (
       <>
-      <Navbar/>
+      <Navbar handleDialog={handleDialog}/>
       <Main/>
       <Section/>
       <Footer/>
-      <Signup_Dialog/>
+      <Signup_Dialog handleDialog={handleDialog} toggleDialog={toggleDialog}/>
       </>
     );
   }

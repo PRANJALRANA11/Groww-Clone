@@ -42,6 +42,7 @@
   width: 389.92px;
   height: 25.59px;
   border: 1px solid white;
+  caret-color:#00d09c;
 }
 
 
@@ -268,6 +269,7 @@ footer{
     width: 1px; 
   }
 }
+
 @keyframes lls-fade-in-out  {
   0% {
     opacity: 0;
@@ -282,6 +284,16 @@ footer{
     opacity: 0;
 }
 }
+
+.item_div:hover{
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+
+
+
+
 
 
 
